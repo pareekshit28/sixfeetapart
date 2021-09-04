@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:sixfeetapart/viewmodels/homescreenviewmodel.dart';
 import 'package:sixfeetapart/viewmodels/settingsscreenviewmodel.dart';
 
 class SettingsScreen extends StatefulWidget {
@@ -57,6 +58,9 @@ class _SettingsScreenState extends State<SettingsScreen> {
                                 Provider.of<SettingsScreenViewModel>(context,
                                         listen: false)
                                     .getWhiteList();
+                                Provider.of<HomeScreenViewModel>(context,
+                                        listen: false)
+                                    .getDevicesList(true);
                               }
                             },
                             child: Row(
